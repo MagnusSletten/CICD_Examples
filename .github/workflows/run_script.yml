@@ -1,18 +1,17 @@
 # An action to run a molecular simulation script, which can be used in other workflows.
-name: Run Molecular Simulation Script
 
+name: Run Molecular Simulation Script
+permissions: read-all
 on:
   workflow_call:
     inputs:
       number_of_hydrogen:
         type: string 
         description: "Number of hydrogen atoms"
-        required: false
         default: "1"
       number_of_oxygen:
         type: string 
         description: "Number of oxygen atoms"
-        required: false
         default: "1"
 
 jobs:

@@ -1,0 +1,20 @@
+# Running hello script from fork, but with better security:
+name: Run Hello Script 
+permissions: read-all
+on:
+  pull_request_target:
+    branches: "main"
+
+jobs:
+    Run_Pull_Request_Code:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout pull-request code
+            uses: actions/checkout@v4
+            with:
+                repository: ${{ github.event.pull_request.head.repo.full_name }}
+                ref:        ${{ github.event.pull_request.head.sha }}
+                fetch-depth: 1
+          - name: Run hello script
+            run: ./print_hello.sh
+        
