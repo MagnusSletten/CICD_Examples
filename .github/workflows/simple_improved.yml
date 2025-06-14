@@ -10,13 +10,15 @@ on:
 
 jobs:
   print_message:
-    #Runs our previously defined workflow_call file. 
+    #Runs our previously defined workflow_call print action. 
     name: Run printing component 
     uses: ./.github/workflows/print_message.yml
     with:
         message: "This action looks better now!"
 
+#Runs our previously defined workflow_call print action. 
   run_advanced_script:
+    #Needs keyword ensures that each job is run in sequence and not in parallel.
     needs: print_message
     uses: ./.github/workflows/run_script.yml
     with:

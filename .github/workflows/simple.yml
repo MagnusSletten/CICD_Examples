@@ -20,7 +20,9 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
   
+#Runs our previously defined workflow_call print action. 
   run_advanced_script:
+    #Needs keyword ensures that each job is run in sequence and not in parallel.
     needs: print_message
     runs-on: ubuntu-latest
     steps: 
