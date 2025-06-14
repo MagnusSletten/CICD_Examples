@@ -1,0 +1,21 @@
+# An action to pring a message, which can be used in other workflows.
+name: Print Message
+
+on:
+  workflow_call:
+    inputs:
+      message:
+        type: string 
+        description: "Message you want to print:"
+        required: false
+        default: "hello world"
+
+jobs:
+  Print_Message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: echo ${{inputs.message}}
+
+      
+      
