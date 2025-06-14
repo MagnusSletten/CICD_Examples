@@ -1,0 +1,25 @@
+name: Improved print and script execution
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+
+jobs:
+  print_message:
+    #Runs our previously defined workflow_call print action.  
+    uses: ./.github/workflows/print_message.yml
+    with:
+        message: "This action looks better now!"
+
+#Runs our previously defined workflow_call print action. 
+  run_simulation:
+    #Needs keyword ensures that each job is run in sequence and not in parallel.
+    needs: print_message
+    uses: ./.github/workflows/run_simulation.yml
+    with:
+        number_of_hydrogen: "2"
+        number_of_oxygen: "2"
+    
+      
+

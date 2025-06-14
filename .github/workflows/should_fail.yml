@@ -1,0 +1,20 @@
+name: Should fail on push
+permissions:  
+  contents: read 
+on:
+  workflow_dispatch:
+
+jobs:
+    Checkout_and_push_code:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v4
+          - name: Create a dummy file for push test
+            run: echo "🚨 should fail" > base_push.txt
+
+          - name: Attempt commit & push via EndBug/add-and-commit
+            uses: EndBug/add-and-commit@v9 
+            with:
+                message: "Sanity: attempt to push to main"
+                add: "base_push.txt"
