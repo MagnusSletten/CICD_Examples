@@ -18,8 +18,7 @@ jobs:
 
   run_advanced_script:
     needs: print_message
-    uses: MagnusSletten/CICD_Examples/.github/workflows/run_script.yml@yml
-    with:
+    uses: MagnusSletten/CICD_Examples/.github/workflows/run_script.yml@main
         number_of_hydrogen: "2"
         number_of_oxygen: "2"
     
