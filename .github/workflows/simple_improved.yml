@@ -12,13 +12,14 @@ jobs:
   print_message:
     #Runs our previously defined workflow_call file. 
     name: Run printing component 
-    uses: MagnusSletten/CICD_Examples/.github/workflows/print_message.yml@main
+    uses: ./.github/workflows/print_message.yml
     with:
         message: "This action looks better now!"
 
   run_advanced_script:
     needs: print_message
-    uses: MagnusSletten/CICD_Examples/.github/workflows/run_script.yml@main
+    uses: ./.github/workflows/run_script.yml
+    with:
         number_of_hydrogen: "2"
         number_of_oxygen: "2"
     
