@@ -26,6 +26,6 @@ jobs:
     steps: 
       - name: Run advanced molecular simulation
         run: |
-          number_of_atoms=1+1
+          number_of_atoms=$((1 + 1))
           echo "Number of atoms: $number_of_atoms"
 
