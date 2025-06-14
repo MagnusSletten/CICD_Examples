@@ -1,6 +1,6 @@
 # Simple workflow 
 
-name: CI
+name: CI_improved
 
 # Controls when the workflow will run
 on:

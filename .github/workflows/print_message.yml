@@ -1,4 +1,4 @@
-# An action to pring a message, which can be used in other workflows.
+# An action to print a message, which can be used in other workflows.
 name: Print Message
 
 on:
