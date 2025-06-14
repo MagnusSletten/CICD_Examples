@@ -1,0 +1,29 @@
+# An action to run a script, which can be used in other workflows.
+name: Run Script
+
+on:
+  workflow_call:
+    inputs:
+      number_of_hydrogen:
+        type: string 
+        description: "Number of hydrogen atoms"
+        required: false
+        default: "1"
+      number_of_oxygen:
+        type: string 
+        description: "Number of oxygen atoms"
+        required: false
+        default: "1"
+
+jobs:
+  run_advanced_script:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Run advanced molecular simulation
+        run: |
+          number_of_hydrogen=${{ inputs.number_of_hydrogen }} 
+          number_of_oxygen=${{ inputs.number_of_oxygen }}
+          total_atoms=$(( number_of_hydrogen + number_of_oxygen ))
+          echo "Number of atoms: $total_atoms"
+
+    

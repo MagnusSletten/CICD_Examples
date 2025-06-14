@@ -15,6 +15,15 @@ jobs:
     uses: MagnusSletten/CICD_Examples/.github/workflows/print_message.yml@main
     with:
         message: "This action looks better now!"
+        
+  run_advanced_script:
+    needs: print_message
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Run advanced molecular simulation
+        run: |
+          number_of_atoms=1+1
+          echo "Number of atoms: $number_of_atoms"
     
       
 
