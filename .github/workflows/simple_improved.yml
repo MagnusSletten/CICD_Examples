@@ -10,8 +10,7 @@ on:
 
 jobs:
   print_message:
-    #Runs our previously defined workflow_call print action. 
-    name: Run printing component 
+    #Runs our previously defined workflow_call print action.  
     uses: ./.github/workflows/print_message.yml
     with:
         message: "This action looks better now!"
