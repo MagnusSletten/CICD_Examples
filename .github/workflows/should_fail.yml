@@ -1,5 +1,5 @@
 # Running hello script from fork, but with better security:
-name: Run Hello Script 
+name: Should fail on push
 permissions:  
   contents: read 
 on:
