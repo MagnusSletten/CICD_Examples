@@ -13,7 +13,7 @@ jobs:
         message: "This action looks better now!"
 
 #Runs our previously defined workflow_call print action. 
-  run_advanced_script:
+  run_simulation:
     #Needs keyword ensures that each job is run in sequence and not in parallel.
     needs: print_message
     uses: ./.github/workflows/run_simulation.yml
