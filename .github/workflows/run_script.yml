@@ -1,7 +1,7 @@
 # An action to run a molecular simulation script, which can be used in other workflows.
 
 name: Run Molecular Simulation Script
-permissions: read-all
+
 on:
   workflow_call:
     inputs:
