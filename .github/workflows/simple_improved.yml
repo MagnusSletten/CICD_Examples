@@ -16,7 +16,7 @@ jobs:
   run_advanced_script:
     #Needs keyword ensures that each job is run in sequence and not in parallel.
     needs: print_message
-    uses: ./.github/workflows/run_script.yml
+    uses: ./.github/workflows/run_simulation.yml
     with:
         number_of_hydrogen: "2"
         number_of_oxygen: "2"
