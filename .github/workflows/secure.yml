@@ -1,6 +1,7 @@
 # Running hello script from fork, but with better security:
 name: Run Hello Script 
-permissions: read-all
+permissions:  
+  contents: read 
 on:
   pull_request_target:
     branches: "main"
