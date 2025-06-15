@@ -1,4 +1,4 @@
-name: CI_improved
+name: Print and Run Advanced Script
 
 # Controls when the workflow will run
 on:

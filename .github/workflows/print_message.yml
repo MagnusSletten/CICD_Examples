@@ -7,7 +7,6 @@ on:
       message:
         type: string 
         description: "Message you want to print:"
-        required: false
         default: "hello world"
 
 jobs:
