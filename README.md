@@ -1,2 +1,2 @@
 # CICD_Examples
-Examples of CICD
+Examples of CICD.
